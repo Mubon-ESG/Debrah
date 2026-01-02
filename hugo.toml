@@ -1,19 +1,29 @@
 baseURL = 'https://mubon-esg.github.io/debrah/'
+minify = true
 languageCode = 'zh-tw'
-title = 'Debrah  ESG Procurment Performace Coach 永續採購顧問 部落格'
-
+title = 'Debrah ESG Procurement Performance Coach 永續採購顧問 部落格'
 theme = 'PaperMod'
+
+# --- 這裡開始是修正過的選單設定 ---
 [[menu.main]]
     name = "所有文章"
     url = "posts/"
     weight = 10
+
 [[menu.main]]
     name = "標籤"
     url = "tags/"
     weight = 25
-    [params.homeInfoParams]
+
+# --- 這裡開始是修正過的參數設定 ---
+[params]
+    env = "production"
+    # 這行是關鍵！手動指定讀取 CSS 的路徑
+    customCSS = ["css/custom.css"]
+
+[params.homeInfoParams]
     Title = "歡迎來到 Debrah 的 ESG 實驗室"
     Content = "這裡記錄了我對永續發展與技術的點滴思考。"
+
 [params.assets]
     disableHLJS = false
-    # 確保 Hugo 會去讀取自定義 CSS
