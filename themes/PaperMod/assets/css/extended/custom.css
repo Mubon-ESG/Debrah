@@ -1,15 +1,17 @@
-/* 讓文章左右邊界變寬 (限制文章寬度) */
-:root {
-    --main-width: 750px; /* 預設較寬，改為 750px 會讓左右留白更多 */
+/* 限制文章寬度，增加左右留白 */
+.main {
+    max-width: 750px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
-/* 讓行與行之間的距離加大 */
+/* 加大行間距與字體 */
 .post-content {
-    line-height: 2.0;   /* 行距 2.0 是最舒服的閱讀比例 */
-    font-size: 18px;    /* 字體稍微加大一點 */
+    line-height: 2.1 !important; /* 更寬鬆的行距 */
+    font-size: 19px !important;  /* 稍微大一點的字 */
 }
 
-/* 讓段落與段落之間空隙加大 */
+/* 段落間距 */
 .post-content p {
-    margin-bottom: 20px; 
+    margin-bottom: 25px !important;
 }
