@@ -1,0 +1,15 @@
+/* 讓文章左右邊界變寬 (限制文章寬度) */
+:root {
+    --main-width: 750px; /* 預設較寬，改為 750px 會讓左右留白更多 */
+}
+
+/* 讓行與行之間的距離加大 */
+.post-content {
+    line-height: 2.0;   /* 行距 2.0 是最舒服的閱讀比例 */
+    font-size: 18px;    /* 字體稍微加大一點 */
+}
+
+/* 讓段落與段落之間空隙加大 */
+.post-content p {
+    margin-bottom: 20px; 
+}
