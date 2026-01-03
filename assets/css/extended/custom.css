@@ -1,17 +1,12 @@
- /* 讓內容縮減寬度並置中 */
-.main, .post-content, .post-title, .post-header {
-    max-width: 760px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding: 10px !important;
+/* === 修復 PaperMod 文章列表無法點擊 === */
+.post-entry a,
+.post-entry .entry-link,
+.post-entry header a {
+  pointer-events: auto !important;
+  cursor: pointer;
 }
 
-/* 強化行距與閱讀舒適度 */
-.post-content {
-    line-height: 2.2 !important;
-    font-size: 19px !important;
+.post-entry .entry-link {
+  position: relative;
+  z-index: 10;
 }
-
-.post-content p {
-    margin-bottom: 25px !important;
-} 
