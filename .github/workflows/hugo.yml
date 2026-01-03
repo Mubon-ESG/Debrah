@@ -24,21 +24,22 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
+  　　- name: Clean public
+ 　　　　 run: rm -rf public
+
+　　　- name: Clean public
+　　　　  run: rm -rf public
       - name: Build with Hugo
-        run: |
-          hugo \
-            --minify \
-            --baseURL "https://mubon-esg.github.io/Debrah/"
+  run: |
+    rm -rf public
+    hugo \
+      --minify \
+      --baseURL "https://mubon-esg.github.io/Debrah/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-      - name: Debug public output
-        run: |
-          ls -R public/posts || true
-          echo "----"
-          find public -maxdepth 4 -type f -name "index.html" | head -n 50
-  deploy:
+   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
