@@ -33,6 +33,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: Debug public output
+        run: |
+          ls -R public/posts || true
+          echo "----"
+          find public -maxdepth 4 -type f -name "index.html" | head -n 50
   deploy:
     needs: build
     runs-on: ubuntu-latest
