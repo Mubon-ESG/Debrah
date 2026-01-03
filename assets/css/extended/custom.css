@@ -1,12 +1,26 @@
-/* === 修復 PaperMod 文章列表無法點擊 === */
-.post-entry a,
-.post-entry .entry-link,
-.post-entry header a {
+ /* 修復 PaperMod 列表卡片不可點：恢復 entry-link 覆蓋整張卡片 */
+.post-entry {
+  position: relative;
+}
+
+.post-entry .entry-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: auto !important;
+}
+
+.post-entry a {
   pointer-events: auto !important;
   cursor: pointer;
 }
 
-.post-entry .entry-link {
+/* 避免內容蓋住覆蓋層 */
+.post-entry .entry-header,
+.post-entry .entry-content,
+.post-entry .entry-footer {
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
+
+body { outline: 5px solid red; }
