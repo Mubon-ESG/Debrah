@@ -12,13 +12,14 @@ theme = "PaperMod"
 
 [[menu.main]]
   name = "所有文章"
-  url = "/posts/"
+  url = "posts/"
   weight = 10
 
 [[menu.main]]
   name = "標籤"
-  url = "/tags/"
+  url = "tags/"
   weight = 20
+
 
 
 
