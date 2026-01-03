@@ -1,24 +1,25 @@
-baseURL = 'https://mubon-esg.github.io/Debrah/'
-languageCode = 'zh-tw'
-title = '<<Debrah ESG Procurement Performace 永續採購顧問>>'
-theme = 'PaperMod'
+baseURL = "https://mubon-esg.github.io/Debrah/"
+languageCode = "zh-tw"
+title = "Debrah ESG Procurement Performance｜永續採購顧問"
+theme = "PaperMod"
 
 [params]
-    env = "production"
+  env = "production"
 
 [params.homeInfoParams]
-    Title = "歡迎來到 Debrah 的 ESG 實驗室"
-    Content = "這裡記錄了我對永續發展與技術的點滴思考。"
+  Title = "歡迎來到 Debrah 的 ESG 實驗室"
+  Content = "這裡記錄了我對永續發展與技術的點滴思考。"
 
 [[menu.main]]
-    name = "所有文章"
-    url = "posts/"
-    weight = 10
+  name = "所有文章"
+  url = "/posts/"
+  weight = 10
 
 [[menu.main]]
-    name = "標籤"
-    url = "tags/"
-    weight = 20
+  name = "標籤"
+  url = "/tags/"
+  weight = 20
+
 
 
 
