@@ -1,5 +1,7 @@
 relativeURLs = true
 canonifyURLs = false
+uglyURLs = false
+
 baseURL = "https://mubon-esg.github.io/Debrah/"
 languageCode = "zh-tw"
 title = "Debrah ESG Procurement Performance｜永續採購顧問"
@@ -25,6 +27,7 @@ theme = "PaperMod"
 [taxonomies]
   tag = "tags"
   category = "categories"
+
 
 
 
