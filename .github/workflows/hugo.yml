@@ -34,6 +34,17 @@ jobs:
         run: |
           rm -rf public
           hugo --minify --baseURL "https://mubon-esg.github.io/Debrah/"
+          
+      - name: Inspect build output
+        run: |
+          echo "===== pwd ====="
+          pwd
+          echo "===== ls root ====="
+          ls -la
+          echo "===== find index.html ====="
+          find . -name index.html
+          echo "===== find public ====="
+          find . -maxdepth 3 -type d -name public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
