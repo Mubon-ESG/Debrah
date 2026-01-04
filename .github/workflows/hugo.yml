@@ -43,6 +43,14 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+          
+     - name: Debug posts output
+        run: |
+          echo "=== list public/posts ==="
+          ls -la public/posts || true
+          echo "=== find posts index ==="
+          find public -maxdepth 3 -type f -path "*/posts/index.html" -o -path "*/posts/_index/index.html" || true
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
