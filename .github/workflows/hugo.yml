@@ -30,26 +30,15 @@ jobs:
           hugo-version: "latest"
           extended: true
 
-      - name: Clean public
-        run: rm -rf public
-
       - name: Build with Hugo
         run: |
-          hugo \
-            --minify \
-            --baseURL "https://mubon-esg.github.io/Debrah/"
+          rm -rf public
+          hugo --minify --baseURL "https://mubon-esg.github.io/Debrah/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-          
-     - name: Debug posts output
-        run: |
-          echo "=== list public/posts ==="
-          ls -la public/posts || true
-          echo "=== find posts index ==="
-          find public -maxdepth 3 -type f -path "*/posts/index.html" -o -path "*/posts/_index/index.html" || true
 
   deploy:
     needs: build
@@ -61,3 +50,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+   
+
+ 
+ 
+
+      
+
+      
